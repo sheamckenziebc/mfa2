@@ -5,13 +5,185 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Century Gothic', 'Futura', 'Avenir Next', 'Avenir', 'Trebuchet MS', 'Segoe UI', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
     overflow-x: hidden;
+}
+
+/* Fixed Header */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.fixed-header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
+    transition: all 0.3s ease;
+    animation: gentleBob 3s ease-in-out infinite;
+}
+
+.header-logo:hover {
+    transform: scale(1.1) rotate(2deg);
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+}
+
+.fixed-header.scrolled .header-logo {
+    height: 45px;
+    animation: quickBob 2s ease-in-out infinite;
+}
+
+/* Navigation */
+.main-nav {
+    position: relative;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #2d3748;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+    margin: 0 1.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #2d3748;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #667eea;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #667eea;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown.active .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-link {
+    display: block;
+    color: #4a5568;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-link:hover {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+}
+
+.dropdown-link:active {
+    background: rgba(102, 126, 234, 0.2);
+    color: #667eea;
+}
+
+.fixed-header.scrolled .nav-link {
+    color: #2d3748;
+}
+
+.fixed-header.scrolled .nav-toggle span {
+    background: #2d3748;
 }
 
 /* Hero section */
@@ -19,7 +191,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 75vh;
     padding: 2rem;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     position: relative;
@@ -53,7 +225,7 @@ body {
 /* Logo */
 .logo-container {
     margin-bottom: 2rem;
-    animation: fadeInUp 0.8s ease-out;
+    animation: cascadeFadeIn 1s ease-out 0.2s both;
 }
 
 .logo {
@@ -74,7 +246,7 @@ body {
     color: #2d3748;
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
-    animation: fadeInUp 0.8s ease-out 0.2s both;
+    animation: cascadeFadeIn 1s ease-out 0.6s both;
 }
 
 .tagline {
@@ -82,8 +254,231 @@ body {
     color: #4a5568;
     font-weight: 400;
     opacity: 0.8;
-    animation: fadeInUp 0.8s ease-out 0.4s both;
+    animation: cascadeFadeIn 1s ease-out 1s both;
     margin-top: 0.5rem;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+    margin-top: 3rem;
+    animation: cascadeFadeIn 1s ease-out 1.4s both;
+}
+
+.scroll-indicator span {
+    display: block;
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.scroll-arrow {
+    font-size: 1.5rem;
+    color: #667eea;
+    animation: bounce 2s infinite;
+}
+
+/* Story section */
+.story-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 6rem 2rem;
+    position: relative;
+}
+
+.story-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 600;
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.8s ease-out;
+}
+
+.section-title.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.story-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.intro-text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+.story-block {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.story-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.story-block h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+.story-block p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 1.2rem;
+}
+
+.story-block p:last-child {
+    margin-bottom: 0;
+}
+
+.highlight {
+    font-weight: 500;
+    color: #667eea !important;
+    font-style: italic;
+}
+
+.gratitude {
+    font-style: italic;
+    color: #718096 !important;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.contact-block {
+    background: linear-gradient(135deg, #667eea10, #764ba210);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.invitation {
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+    color: #2d3748 !important;
+    text-align: center;
+}
+
+.garden-note {
+    font-style: italic;
+    text-align: center;
+    color: #667eea !important;
+    font-size: 1rem !important;
+}
+
+.closing {
+    font-weight: 600 !important;
+    text-align: center;
+    color: #2d3748 !important;
+    font-size: 1.1rem !important;
+}
+
+/* Textiles and Threads Sections */
+.textiles-section,
+.threads-section {
+    padding: 6rem 2rem;
+    position: relative;
+}
+
+.textiles-section {
+    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e0 100%);
+}
+
+.threads-section {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+}
+
+.section-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.subsection {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.subsection:last-child {
+    margin-bottom: 0;
+}
+
+.subsection-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+.content-block p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 1.2rem;
+}
+
+.content-block p:last-child {
+    margin-bottom: 0;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.feature-list li {
+    font-size: 1.1rem;
+    color: #4a5568;
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.feature-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-size: 1rem;
+}
+
+.catalog-note {
+    font-style: italic;
+    color: #718096 !important;
+    font-size: 1rem !important;
+    text-align: center;
+    margin-top: 1.5rem;
 }
 
 /* Animations */
@@ -98,8 +493,66 @@ body {
     }
 }
 
+@keyframes cascadeFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+        filter: blur(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0px);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes gentleBob {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes quickBob {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
+    .hero-section {
+        min-height: 70vh;
+    }
+    
     .container {
         padding: 2.5rem 1.5rem;
         margin: 1rem;
@@ -116,11 +569,145 @@ body {
     .tagline {
         font-size: 1.1rem;
     }
+    
+    .scroll-indicator {
+        margin-top: 2rem;
+    }
+    
+    .story-section {
+        padding: 4rem 1rem;
+    }
+    
+    .story-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .intro-text {
+        font-size: 1.2rem;
+    }
+    
+    .story-block h3 {
+        font-size: 1.3rem;
+    }
+    
+    .story-block p {
+        font-size: 1rem;
+    }
+    
+    .contact-block {
+        padding: 1.5rem;
+    }
+    
+    /* Mobile Navigation */
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 100px;
+        right: -100%;
+        width: 280px;
+        height: calc(100vh - 100px);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 2rem 0;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-item {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: rgba(102, 126, 234, 0.05);
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    
+    .dropdown.active .dropdown-menu {
+        max-height: 200px;
+    }
+    
+    .dropdown-link {
+        padding: 0.75rem 3rem;
+        font-size: 1rem;
+    }
+    
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .textiles-section,
+    .threads-section {
+        padding: 4rem 1rem;
+    }
+    
+    .subsection {
+        padding: 2rem 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .subsection-title {
+        font-size: 1.5rem;
+    }
+    
+    .content-block p {
+        font-size: 1rem;
+    }
+    
+    .feature-list li {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
     .hero-section {
         padding: 1rem;
+        min-height: 60vh;
     }
     
     .container {
@@ -137,5 +724,102 @@ body {
     
     .tagline {
         font-size: 1rem;
+    }
+    
+    .scroll-indicator {
+        margin-top: 1.5rem;
+    }
+    
+    .scroll-indicator span {
+        font-size: 0.8rem;
+    }
+    
+    .header-content {
+        padding: 0 1rem;
+    }
+    
+    .header-logo {
+        height: 50px;
+    }
+    
+    .fixed-header.scrolled .header-logo {
+        height: 40px;
+    }
+    
+    .story-section {
+        padding: 3rem 0.5rem;
+    }
+    
+    .story-content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .intro-text {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .story-block {
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    .story-block h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .story-block p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-block {
+        padding: 1.2rem;
+    }
+    
+    .invitation {
+        font-size: 1.1rem !important;
+    }
+    
+    .closing {
+        font-size: 1rem !important;
+    }
+    
+    .textiles-section,
+    .threads-section {
+        padding: 3rem 0.5rem;
+    }
+    
+    .subsection {
+        padding: 1.5rem 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .subsection-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .content-block p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-list li {
+        font-size: 0.95rem;
+        padding: 0.4rem 0;
+    }
+    
+    .catalog-note {
+        font-size: 0.9rem !important;
+        margin-top: 1rem;
     }
 } 
