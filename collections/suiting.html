@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suiting Collection - My Fabric Affinity</title>
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <style>
+        .collection-hero {
+            background: linear-gradient(135deg, #17b7ac 0%, #f97316 100%);
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+        }
+        
+        .collection-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .collection-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .product-quantity {
+            color: #17b7ac;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-description {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 160px;
+            left: 2rem;
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+            z-index: 10;
+        }
+        
+        .back-button:hover {
+            background: white;
+            transform: translateX(-5px);
+        }
+        
+        @media (max-width: 768px) {
+            .back-button {
+                top: 100px;
+                left: 1rem;
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container" style="margin-left: 1rem;">
+                <a href="../index.html">
+                    <img src="../images/mfalogotrans.png" alt="My Fabric Affinity Logo" class="logo" id="logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="../index.html#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="../index.html#textiles" class="nav-link">Textiles</a></li>
+                    <li class="nav-item"><a href="../index.html#threads" class="nav-link">Threads</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="../index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <a href="../index.html#textiles" class="back-button">← Back to Textiles</a>
+
+    <main>
+        <section class="collection-hero">
+            <h1>Suiting Collection</h1>
+            <p>Professional grade fabrics for sophisticated tailoring</p>
+        </section>
+
+        <section class="product-grid">
+            <a href="../productdetails/suiting-in-denver-medium-gray-16dff2.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Denver Medium Gray Suiting" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Denver Medium Gray</h3>
+                    <p class="product-quantity">Available</p>
+                    <p class="product-description">Premium Denver suiting in classic medium gray for versatile tailoring.</p>
+                </div>
+            </a>
+
+            <a href="../productdetails/suiting-in-marta-lighter-charcoal-b00b01.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Marta Lighter Charcoal Suiting" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Marta Lighter Charcoal</h3>
+                    <p class="product-quantity">Available</p>
+                    <p class="product-description">Elegant Marta suiting in sophisticated lighter charcoal shade.</p>
+                </div>
+            </a>
+
+            <a href="../productdetails/suiting-in-pegasus-ii-gray-heathered-a4742f.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Pegasus II Gray Heathered Suiting" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Pegasus II Gray Heathered</h3>
+                    <p class="product-quantity">Available</p>
+                    <p class="product-description">Luxurious Pegasus II with heathered gray texture for refined styling.</p>
+                </div>
+            </a>
+
+            <a href="../productdetails/suiting-in-portland-black-3e632a.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Portland Black Suiting" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Portland Black</h3>
+                    <p class="product-quantity">Available</p>
+                    <p class="product-description">Classic Portland suiting in timeless black for formal wear.</p>
+                </div>
+            </a>
+
+            <a href="../productdetails/suiting-in-toscana-light-gray-85bea4.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Toscana Light Gray Suiting" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Toscana Light Gray</h3>
+                    <p class="product-quantity">Available</p>
+                    <p class="product-description">Fine Toscana weave in elegant light gray for summer suiting.</p>
+                </div>
+            </a>
+
+            <a href="../productdetails/suiting-in-toscana-warm-charcoal-e17b51.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Toscana Warm Charcoal Suiting" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Toscana Warm Charcoal</h3>
+                    <p class="product-quantity">Available</p>
+                    <p class="product-description">Rich Toscana in warm charcoal for executive styling.</p>
+                </div>
+            </a>
+
+            <a href="../productdetails/suiting-in-toscana-white-ff30c5.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Toscana White Suiting" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Toscana White</h3>
+                    <p class="product-quantity">Available</p>
+                    <p class="product-description">Crisp Toscana in pure white for special occasion tailoring.</p>
+                </div>
+            </a>
+
+            <a href="../productdetails/suiting-wool-27a18c.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Wool Suiting" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Premium Wool</h3>
+                    <p class="product-quantity">Available</p>
+                    <p class="product-description">High-quality wool suiting fabric with excellent drape and durability.</p>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <script src="../src/components/logo.js"></script>
+</body>
+</html> 

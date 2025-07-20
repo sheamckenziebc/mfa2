@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silk Variety Collection - My Fabric Affinity</title>
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <style>
+        .collection-hero {
+            background: linear-gradient(135deg, #17b7ac 0%, #f97316 100%);
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+        }
+        
+        .collection-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .collection-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .product-quantity {
+            color: #17b7ac;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-description {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 160px;
+            left: 2rem;
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+            z-index: 10;
+        }
+        
+        .back-button:hover {
+            background: white;
+            transform: translateX(-5px);
+        }
+        
+        @media (max-width: 768px) {
+            .back-button {
+                top: 100px;
+                left: 1rem;
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container" style="margin-left: 1rem;">
+                <a href="../index.html">
+                    <img src="../images/mfalogotrans.png" alt="My Fabric Affinity Logo" class="logo" id="logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="../index.html#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="../index.html#textiles" class="nav-link">Textiles</a></li>
+                    <li class="nav-item"><a href="../index.html#threads" class="nav-link">Threads</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="../index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <a href="../index.html#textiles" class="back-button">← Back to Textiles</a>
+
+    <main>
+        <section class="collection-hero">
+            <h1>Silk Variety Collection</h1>
+            <p>Diverse silk options for every project and style</p>
+        </section>
+
+        <section class="product-grid">
+            <a href="../productdetails/silks-in-silk-charmeuse-dusty-blue-d9ebd9.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Silk Charmeuse Dusty Blue" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Silk Charmeuse Dusty Blue</h3>
+                    <p class="product-quantity">Available</p>
+                    <p class="product-description">Luxurious charmeuse silk in elegant dusty blue.</p>
+                </div>
+            </a>
+
+            <a href="../productdetails/silks-in-royal-silk-georgette-nude-f7f48b.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Royal Silk Georgette Nude" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Royal Silk Georgette Nude</h3>
+                    <p class="product-quantity">Available</p>
+                    <p class="product-description">Flowing georgette silk in sophisticated nude tone.</p>
+                </div>
+            </a>
+
+            <a href="../productdetails/silks-voile-wasabi-green-9e891b.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Silk Voile Wasabi Green" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Silk Voile Wasabi Green</h3>
+                    <p class="product-quantity">Available</p>
+                    <p class="product-description">Lightweight voile silk in vibrant wasabi green.</p>
+                </div>
+            </a>
+
+            <a href="../productdetails/silks-dusty-lilac-f27e11.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Dusty Lilac Silk" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Dusty Lilac Silk</h3>
+                    <p class="product-quantity">Available</p>
+                    <p class="product-description">Delicate silk in romantic dusty lilac shade.</p>
+                </div>
+            </a>
+
+            <a href="../productdetails/silks-in-spandex-silk-med-gray-2c106f.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Spandex Silk Medium Gray" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Spandex Silk Medium Gray</h3>
+                    <p class="product-quantity">Available</p>
+                    <p class="product-description">Stretch silk blend in versatile medium gray.</p>
+                </div>
+            </a>
+
+            <a href="../productdetails/silks-lemon-yellow=654085.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Lemon Yellow Silk" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Lemon Yellow Silk</h3>
+                    <p class="product-quantity">Available</p>
+                    <p class="product-description">Bright and cheerful lemon yellow silk.</p>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <script src="../src/components/logo.js"></script>
+</body>
+</html> 

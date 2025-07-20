@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching Threads Collection - My Fabric Affinity</title>
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <style>
+        .collection-hero {
+            background: linear-gradient(135deg, #17b7ac 0%, #f97316 100%);
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+        }
+        
+        .collection-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .collection-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .product-quantity {
+            color: #17b7ac;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-description {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .back-button {
+            position: fixed;
+            top: 160px;
+            left: 2rem;
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+            z-index: 10;
+        }
+        
+        .back-button:hover {
+            background: white;
+            transform: translateX(-5px);
+        }
+        
+        @media (max-width: 768px) {
+            .back-button {
+                top: 100px;
+                left: 1rem;
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container" style="margin-left: 1rem;">
+                <a href="../index.html">
+                    <img src="../images/mfalogotrans.png" alt="My Fabric Affinity Logo" class="logo" id="logo">
+                </a>
+            </div>
+            <nav class="nav">
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="../index.html#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="../index.html#textiles" class="nav-link">Textiles</a></li>
+                    <li class="nav-item"><a href="../index.html#threads" class="nav-link">Threads</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="../index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <a href="../index.html#threads" class="back-button">← Back to Threads</a>
+
+    <main>
+        <section class="collection-hero">
+            <h1>Thread Collection</h1>
+            <p>Premium threads for professional finishing and creative projects</p>
+        </section>
+
+        <section class="product-grid">
+            <a href="../productdetails/matching-threads-nylon-hemming-d456b2.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Nylon Hemming Thread" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Nylon Hemming Thread</h3>
+                    <p class="product-quantity">15 meters available</p>
+                    <p class="product-description">Durable nylon thread perfect for hemming and finishing work.</p>
+                </div>
+            </a>
+
+            <a href="../productdetails/matching-threads-black-1ffd9e.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Black Thread" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Black Thread</h3>
+                    <p class="product-quantity">1 meter available</p>
+                    <p class="product-description">Classic black thread for versatile sewing applications.</p>
+                </div>
+            </a>
+
+            <a href="../productdetails/matching-threads-red-bda964.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Red Thread" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Red Thread</h3>
+                    <p class="product-quantity">1 meter available</p>
+                    <p class="product-description">Vibrant red thread for decorative and functional stitching.</p>
+                </div>
+            </a>
+
+            <a href="../productdetails/matching-threads-m-6f8f57.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Specialty Thread" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Specialty Thread</h3>
+                    <p class="product-quantity">6.8 meters available</p>
+                    <p class="product-description">Specialized thread for unique sewing requirements.</p>
+                </div>
+            </a>
+
+            <a href="../productdetails/matching-threads-_-box-of-9b3ebe.html" class="product-card">
+                <img src="../images/butterflywing.jpg" alt="Thread Box Collection" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">Thread Box Collection</h3>
+                    <p class="product-quantity">12 meters available</p>
+                    <p class="product-description">Curated box of assorted threads for complete projects.</p>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <script src="../src/components/logo.js"></script>
+</body>
+</html> 

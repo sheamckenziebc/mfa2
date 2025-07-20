@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Fabric Affinity</title>
+    <title>My Fabric Affinity - A Fabric Finale Summer Sale</title>
     <link rel="stylesheet" href="src/styles/main.css">
 </head>
 <body>
@@ -27,33 +27,34 @@
                     <li class="nav-item">
                         <a href="#our-story" class="nav-link">Our Story</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
                         <a href="#textiles" class="nav-link">Textiles</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#textiles-overview" class="dropdown-link">Overview</a></li>
-                            <li><a href="#textiles-catalog" class="dropdown-link">Product Catalog</a></li>
-                        </ul>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
                         <a href="#threads" class="nav-link">Threads</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#threads-overview" class="dropdown-link">Overview</a></li>
-                            <li><a href="#threads-catalog" class="dropdown-link">Product Catalog</a></li>
-                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
+    <!-- Hero Section with Wallpaper Background -->
+    <section id="home" class="hero-section" data-bg="images/silk-variety.jpg">
+        <div class="hero-background-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-left">
             <div class="logo-container">
-                <img src="images/mfalogotrans.png" alt="My Fabric Affinity Logo" class="logo">
+                    <img src="images/mfalogotrans.png" alt="My Fabric Affinity Logo" class="logo circular-image">
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title slide-in-text">A Fabric Finale</h1>
+                    <h2 class="hero-subtitle slide-in-text">Summer Sale</h2>
+                    <p class="hero-description slide-in-text">This fabric finale summer sale is stocked full of goodies from our last atelier collection.</p>
+                </div>
             </div>
-            <h1 class="company-name">My Fabric Affinity</h1>
-            <p class="tagline">Summer Pop Up</p>
             <div class="scroll-indicator">
                 <span>Scroll to discover our journey</span>
                 <div class="scroll-arrow">↓</div>
@@ -61,25 +62,26 @@
         </div>
     </section>
 
-    <!-- Our Story Section -->
-    <section id="our-story" class="story-section">
+    <!-- Our Story Section with Background Image -->
+    <section id="our-story" class="story-section" data-bg="images/telio-dupioni-silks.jpg">
+        <div class="section-background-overlay"></div>
         <div class="story-container">
             <h2 class="section-title">Our Story</h2>
             
             <div class="story-content">
-                <p class="intro-text">This summer pop-up is stocked full of goodies from our last atelier collection.</p>
+                <p class="intro-text">This fabric finale summer sale is stocked full of goodies from our last atelier collection.</p>
                 
-                <div class="story-block">
+                <div class="story-block" data-aos="fade-right">
                     <p>We are Amanda & a small team of talented helpers, who thankfully make MFA studio processes a fun & passionate supporter of local makers & creativity.</p>
                     
                     <p>We originally brought these cherished textiles & threads to Victoria with plans to start making more few-of-a-kind fashions. Soon after the move from Ontario, Amanda fell ill & life had to pause for over 4 years.</p>
                     
                     <p>Now, as Amanda heals & reconnects with her true calling - songwriting & singing - she's choosing to step away from the fashion industry.</p>
                     
-                    <p class="highlight">This summer pop-up is more than just a sale, it's to support her rebirth; it is a farewell & a celebration of everything we've built together.</p>
+                    <p class="highlight">This fabric finale summer sale is more than just a sale, it's to support her rebirth; it is a farewell & a celebration of everything we've built together.</p>
                 </div>
 
-                <div class="story-block">
+                <div class="story-block" data-aos="fade-left">
                     <h3>Amanda's Journey</h3>
                     <p>We've always had a deep love for fabric & understand the powerful wonders, workings & needs of a fashion maker. Amanda brings over 40 years experience with textile & threads, beginning her work in fashion even before college studies in technique & design.</p>
                     
@@ -90,7 +92,8 @@
                     <p class="gratitude">Thank you for being part of this chapter.</p>
                 </div>
 
-                <div class="story-block">
+                <div class="story-block how-we-roll-section" data-bg="images/neutrals.jpg" data-aos="zoom-in">
+                    <div class="story-overlay"></div>
                     <h3>How We Roll</h3>
                     <p>Amanda & MFA are committed to helping you bring your textile projects to life. With joy, we present these carefully selected treasures - intentionally & primarily to local designers & makers.</p>
                     
@@ -101,80 +104,198 @@
                     <p>We're proud to offer exceptional customer service, to support & encourage your creative process. We wish for these beautiful, quality textiles & threads to bring you as much joy & inspiration as they brought us.</p>
                 </div>
 
-                <div class="story-block contact-block">
+                <div class="story-block contact-block" data-aos="fade-up">
                     <p class="invitation">You are invited to text, call or email Amanda to place an order or book a private shopping session at our Metchosin studio.</p>
                     
                     <p class="garden-note">Garden breaks are included.</p>
                     
-                    <p class="closing">Here's to making yummy futures real.</p>
+                    <div class="contact-link-container">
+                        <a href="#contact" class="contact-link-button">Get In Touch with Amanda</a>
+                    </div>
+                    
+                    <p class="closing">Explore our Collections Below</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Textiles Section -->
+    <!-- Textiles Gallery Section -->
     <section id="textiles" class="textiles-section">
         <div class="section-container">
             <h2 class="section-title">Textiles</h2>
             
-            <!-- Textiles Overview -->
-            <div id="textiles-overview" class="subsection">
-                <h3 class="subsection-title">Overview</h3>
-                <div class="content-block">
-                    <p>Discover our carefully curated collection of premium textiles, sourced and selected with the discerning maker in mind. Each piece tells a story of quality, craftsmanship, and creative possibility.</p>
-                    <p>From luxurious natural fibers to unique vintage finds, our textile collection represents years of passionate collecting and expertise in fabric selection.</p>
-                </div>
-            </div>
-
-            <!-- Textiles Product Catalog -->
-            <div id="textiles-catalog" class="subsection">
-                <h3 class="subsection-title">Product Catalog</h3>
-                <div class="content-block">
-                    <p>Our textile catalog features an extensive range of materials perfect for your creative projects:</p>
-                    <ul class="feature-list">
-                        <li>Premium natural fiber fabrics</li>
-                        <li>Vintage and rare textile finds</li>
-                        <li>Sustainable and eco-friendly options</li>
-                        <li>Designer deadstock and samples</li>
-                        <li>International imports and local treasures</li>
-                    </ul>
-                    <p class="catalog-note">Each textile comes with detailed information about fiber content, care instructions, and suggested applications.</p>
-                </div>
+                        <!-- Textiles Gallery Grid -->
+            <div class="gallery-grid">
+                <a href="collections/telio-dupioni-silks.html" class="gallery-tile large-tile" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="images/telio-dupioni-silks.jpg" alt="Telio dupioni silk fabrics in vibrant colors" class="gallery-image zoom-on-hover">
+                    <div class="gallery-overlay">
+                        <h3>Telio Dupioni Silks</h3>
+                        <p>Premium dupioni silk collection</p>
+                        <span class="gallery-cta">Explore Collection</span>
+                    </div>
+                </a>
+                
+                <a href="collections/indian-dupioni-silks.html" class="gallery-tile" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/indian-dupioni-silks.jpg" alt="Indian dupioni silk fabrics with rich textures" class="gallery-image zoom-on-hover">
+                    <div class="gallery-overlay">
+                        <h3>Indian Dupioni Silks</h3>
+                        <p>Heritage silk textures</p>
+                        <span class="gallery-cta">Explore Collection</span>
+                    </div>
+                </a>
+                
+                <a href="collections/silk-variety.html" class="gallery-tile" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/silk-variety.jpg" alt="Silk variety including finished garments and fabrics" class="gallery-image zoom-on-hover">
+                    <div class="gallery-overlay">
+                        <h3>Silk Variety</h3>
+                        <p>Diverse silk options</p>
+                        <span class="gallery-cta">Explore Collection</span>
+                    </div>
+                </a>
+                
+                <a href="collections/suiting.html" class="gallery-tile tall-tile" data-aos="fade-left" data-aos-delay="400">
+                    <img src="images/suiting.jpg" alt="Professional suiting fabrics in classic colors" class="gallery-image zoom-on-hover">
+                    <div class="gallery-overlay">
+                        <h3>Suiting</h3>
+                        <p>Professional grade fabrics</p>
+                        <span class="gallery-cta">Explore Collection</span>
+                    </div>
+                </a>
+                
+                <a href="collections/knits.html" class="gallery-tile" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="images/knits.jpg" alt="Soft knit fabrics in various weights and colors" class="gallery-image zoom-on-hover">
+                    <div class="gallery-overlay">
+                        <h3>Knits</h3>
+                        <p>Comfortable stretch fabrics</p>
+                        <span class="gallery-cta">Explore Collection</span>
+                    </div>
+                </a>
+                
+                <a href="collections/synthetics-other-wovens.html" class="gallery-tile" data-aos="fade-up" data-aos-delay="600">
+                    <img src="images/synthetics.jpg" alt="Synthetic fabrics and other woven materials" class="gallery-image zoom-on-hover">
+                    <div class="gallery-overlay">
+                        <h3>Synthetics & Other Wovens</h3>
+                        <p>Modern synthetic options</p>
+                        <span class="gallery-cta">Explore Collection</span>
+                    </div>
+                </a>
+                
+                <a href="collections/vinyl-upholstery.html" class="gallery-tile" data-aos="fade-up" data-aos-delay="700">
+                    <img src="images/butterfly.jpg" alt="Vinyl and upholstery materials for home furnishing" class="gallery-image zoom-on-hover">
+                    <div class="gallery-overlay">
+                        <h3>Vinyl & Upholstery</h3>
+                        <p>Home furnishing materials</p>
+                        <span class="gallery-cta">Explore Collection</span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Threads Section -->
-    <section id="threads" class="threads-section">
+    <!-- Color Transition Section -->
+    <section class="color-transition turquoise-section" data-bg="images/blue-green.jpg">
+        <div class="transition-overlay"></div>
+    </section>
+
+    <!-- Threads Gallery Section -->
+    <section id="threads" class="threads-section" data-bg="images/tape-measure-2406328_1280.jpg">
+        <div class="threads-background-overlay"></div>
         <div class="section-container">
             <h2 class="section-title">Threads</h2>
             
-            <!-- Threads Overview -->
-            <div id="threads-overview" class="subsection">
-                <h3 class="subsection-title">Overview</h3>
-                <div class="content-block">
-                    <p>Explore our exceptional collection of threads, carefully selected to complement our textile offerings. From essential basics to specialty threads for unique projects.</p>
-                    <p>Many of our threads are proudly made in Canada, supporting local industry while providing you with the highest quality materials for your creative endeavors.</p>
+                        <!-- Threads Gallery Grid -->
+            <div class="gallery-grid threads-grid">
+                <a href="collections/matching-threads.html" class="gallery-tile" data-aos="slide-up" data-aos-delay="100">
+                    <img src="images/butterfly.jpg" alt="Serger threads for professional finishing" class="gallery-image zoom-on-hover">
+                    <div class="gallery-overlay">
+                        <h3>Serger Threads</h3>
+                        <p>Professional finishing threads</p>
+                        <span class="gallery-cta">Explore Collection</span>
+                    </div>
+                </a>
+                
+                <a href="collections/matching-threads.html" class="gallery-tile" data-aos="slide-up" data-aos-delay="200">
+                    <img src="images/butterfly.jpg" alt="Smaller thread spools for detailed work" class="gallery-image zoom-on-hover">
+                    <div class="gallery-overlay">
+                        <h3>Smaller Spools</h3>
+                        <p>Perfect for detailed work</p>
+                        <span class="gallery-cta">Explore Collection</span>
+                    </div>
+                </a>
+                
+                <a href="collections/matching-threads.html" class="gallery-tile" data-aos="slide-up" data-aos-delay="300">
+                    <img src="images/butterfly.jpg" alt="Nylon hemming threads for durable finishing" class="gallery-image zoom-on-hover">
+                    <div class="gallery-overlay">
+                        <h3>Nylon Hemming</h3>
+                        <p>Durable finishing threads</p>
+                        <span class="gallery-cta">Explore Collection</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Private Studio & Contact Section -->
+    <section id="contact" class="studio-contact-section" data-bg="images/PXL_20250701_025039517.jpg">
+        <div class="studio-overlay"></div>
+        <div class="studio-contact-container">
+            <div class="contact-card" data-aos="slide-in-left">
+                <h3 class="contact-name">Contact Amanda</h3>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="contact-label">Email:</span>
+                        <a href="mailto:myfabricaffinity@gmail.com" class="contact-value">myfabricaffinity@gmail.com</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-label">Phone:</span>
+                        <a href="tel:+17785339888" class="contact-value">778.533.9888</a>
+                    </div>
+                    
+                    <div class="payment-info">
+                        <h4 class="payment-title">Method of payment kindly requested:</h4>
+                        <p class="payment-methods">Cash or e-transfer</p>
+                    </div>
+                    
+                    <div class="contact-note">
+                        <p>Reach out to book your private shopping session at our Metchosin studio or to place an order. Garden breaks included!</p>
+                    </div>
                 </div>
             </div>
-
-            <!-- Threads Product Catalog -->
-            <div id="threads-catalog" class="subsection">
-                <h3 class="subsection-title">Product Catalog</h3>
-                <div class="content-block">
-                    <p>Our thread collection includes:</p>
-                    <ul class="feature-list">
-                        <li>Canadian-made premium threads</li>
-                        <li>Specialty and decorative threads</li>
-                        <li>Natural fiber options</li>
-                        <li>Embroidery and quilting threads</li>
-                        <li>Industrial strength and delicate options</li>
-                    </ul>
-                    <p class="catalog-note">All threads come with minimal packaging as part of our commitment to environmental responsibility.</p>
+            
+            <div class="studio-content" data-aos="slide-in-right">
+                <h2 class="studio-title">Private Studio Experience</h2>
+                <p class="studio-description">Visit our Metchosin studio for a personalized shopping experience surrounded by nature. Browse our collection at your own pace, enjoy garden breaks, and receive expert guidance from Amanda.</p>
+                <p class="studio-highlight">A truly unique way to discover your perfect textiles and threads.</p>
+                <div class="studio-features">
+                    <div class="feature-item">
+                        <span>Garden setting</span>
+                    </div>
+                    <div class="feature-item">
+                        <span>Personal consultation</span>
+                    </div>
+                    <div class="feature-item">
+                        <span>Private atmosphere</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer Section -->
+    <footer id="footer" class="footer-section">
+        <div class="footer-container">
+            <div class="footer-content">
+                <h3 class="footer-title">Thank You</h3>
+                <p class="footer-text">We appreciate you being part of Amanda's journey and the My Fabric Affinity story. Here's to creative futures and beautiful textiles.</p>
+                <p class="footer-text">For inquiries, please reach out to book your private shopping session or place an order.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 My Fabric Affinity. Handcrafted with love in Victoria, BC.</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
         // Header scroll effect
@@ -263,27 +384,35 @@
                     e.preventDefault();
                     e.stopPropagation();
                     
-                    const targetId = link.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
+                    const href = link.getAttribute('href');
+                    console.log('Dropdown link clicked:', href); // Debug log
                     
-                    if (targetElement) {
-                        // Close any open dropdowns on desktop
-                        dropdowns.forEach(dropdown => {
-                            dropdown.classList.remove('active');
-                        });
+                    if (href && href.startsWith('#')) {
+                        const targetId = href.substring(1);
+                        const targetElement = document.getElementById(targetId);
                         
-                        const headerHeight = header.offsetHeight;
-                        const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                        console.log('Looking for element with ID:', targetId); // Debug log
+                        console.log('Found element:', targetElement); // Debug log
                         
-                        // Use setTimeout to ensure DOM is ready for scroll
-                        setTimeout(() => {
+                        if (targetElement) {
+                            // Close any open dropdowns on desktop
+                            dropdowns.forEach(dropdown => {
+                                dropdown.classList.remove('active');
+                            });
+                            
+                            const headerHeight = header.offsetHeight || 100;
+                            const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                            
+                            console.log('Scrolling to position:', targetPosition); // Debug log
+                            
+                            // Immediate scroll without setTimeout
                             window.scrollTo({
                                 top: targetPosition,
                                 behavior: 'smooth'
                             });
-                        }, 100);
-                    } else {
-                        console.warn('Target element not found:', targetId);
+                        } else {
+                            console.warn('Target element not found:', targetId);
+                        }
                     }
                     
                     // Close mobile menu
@@ -301,29 +430,72 @@
             });
         });
         
-        // Add intersection observer for smooth animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
+        // Enhanced Scroll Animations and Image Effects
+        document.addEventListener('DOMContentLoaded', () => {
+            // Static Background Setup
+            const bgElements = document.querySelectorAll('[data-bg]');
+            
+            function setupStaticBackgrounds() {
+                bgElements.forEach(element => {
+                    const bgImage = element.getAttribute('data-bg');
+                    element.style.backgroundImage = `url(${bgImage})`;
+                    element.style.backgroundPosition = 'center center';
+                    element.style.backgroundSize = 'cover';
+                    element.style.backgroundAttachment = 'fixed';
+                    element.style.backgroundRepeat = 'no-repeat';
+                });
+            }
+            
+            setupStaticBackgrounds(); // Initial call
+            
+            // AOS-like Animation Observer
+            const animationObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
+                        const element = entry.target;
+                        const animationType = element.getAttribute('data-aos');
+                        const delay = parseInt(element.getAttribute('data-aos-delay') || 0);
+                        
+                        setTimeout(() => {
+                            element.classList.add('aos-animate');
+                            
+                            // Add specific animation classes
+                            switch(animationType) {
+                                case 'fade-up':
+                                    element.classList.add('fade-up');
+                                    break;
+                                case 'fade-left':
+                                    element.classList.add('fade-left');
+                                    break;
+                                case 'fade-right':
+                                    element.classList.add('fade-right');
+                                    break;
+                                case 'zoom-in':
+                                    element.classList.add('zoom-in');
+                                    break;
+                                case 'slide-up':
+                                    element.classList.add('slide-up');
+                                    break;
+                                case 'slide-in-left':
+                                    element.classList.add('slide-in-left');
+                                    break;
+                                case 'pop-in':
+                                    element.classList.add('pop-in');
+                                    break;
+                                default:
+                                    element.classList.add('fade-in');
+                            }
+                        }, delay);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
             });
-        }, observerOptions);
-        
-        // Observe sections for scroll animations
-        document.addEventListener('DOMContentLoaded', () => {
-            const animatedElements = document.querySelectorAll('.story-block, .subsection');
-            animatedElements.forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(30px)';
-                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(element);
+            
+            // Observe all elements with data-aos attributes
+            document.querySelectorAll('[data-aos]').forEach(element => {
+                animationObserver.observe(element);
             });
             
             // Enhanced observer for section titles
@@ -343,6 +515,22 @@
             sectionTitles.forEach(title => {
                 titleObserver.observe(title);
             });
+            
+            // Gallery tile click handlers
+            document.querySelectorAll('.gallery-tile').forEach(tile => {
+                tile.addEventListener('click', () => {
+                    tile.classList.add('clicked');
+                    setTimeout(() => {
+                        tile.classList.remove('clicked');
+                    }, 300);
+                });
+            });
+            
+            // Reduced motion support
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            if (prefersReducedMotion.matches) {
+                document.body.classList.add('reduce-motion');
+            }
         });
     </script>
 </body>
